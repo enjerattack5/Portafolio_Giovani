@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #e5382b;
+  --color-brand-red-hover: #cf2d21;
+  --color-brand-dark: #0e0e10;
+  --color-brand-card: #16161a;
+  --color-brand-beige: #f4f1ea;
+  --color-brand-beige-card: #ede9e0;
+  --color-brand-beige-border: #e2ddd3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
