@@ -12,7 +12,8 @@ export default function Projects({ onOpenModal }) {
       description: 'Plataforma integral para gestionar expedientes de pacientes, doctores y citas desde una interfaz clara y segura.',
       tags: ['REACT', 'NODE.JS', 'MONGODB'],
       image: dentalImg,
-      liveUrl: 'https://consultorio-app-seven.vercel.app/'
+      liveUrl: 'https://consultorio-app-seven.vercel.app/',
+      githubUrl: 'https://github.com/enjerattack5/Dentista'
     },
     {
       id: 'grano-de-oro',
@@ -21,7 +22,8 @@ export default function Projects({ onOpenModal }) {
       description: 'Experiencia responsiva de pedidos con menú visual y flujos personalizados para consumo local o para llevar.',
       tags: ['UI/UX', 'REACT', 'FIGMA'],
       image: granoImg,
-      liveUrl: 'https://grano-oro.vercel.app/'
+      liveUrl: 'https://grano-oro.vercel.app/',
+      githubUrl: 'https://github.com/Jose-Diaz58/Grano-Oro-Cafeteria'
     }
   ];
 
@@ -30,7 +32,7 @@ export default function Projects({ onOpenModal }) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between items-start mb-16 gap-6">
           <div>
-            <div className="flex items-center gap-2 text-sm md:text-base font-mono uppercase tracking-widest text-[#e5382b] font-semibold">
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#e5382b] font-semibold">
               <span className="w-6 h-[2px] bg-[#e5382b]"></span> TRABAJO SELECCIONADO
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mt-4 tracking-tight">
@@ -38,7 +40,7 @@ export default function Projects({ onOpenModal }) {
               <span className="text-[#e5382b]">productos reales.</span>
             </h2>
           </div>
-          <p className="text-gray-400 max-w-md text-pretty md:text-4xl">
+          <p className="text-gray-400 max-w-md text-sm md:text-base">
             Cada proyecto parte de una necesidad concreta y termina en una experiencia simple, útil y escalable.
           </p>
         </div>
@@ -89,19 +91,31 @@ export default function Projects({ onOpenModal }) {
                     </button>
                   </div>
 
-                  {/* Enlace a la demo en vivo */}
-                  {p.liveUrl && (
-                    <div>
+                  <div className="flex flex-wrap gap-4 pt-1">
+                    {/* Enlace a la demo en vivo */}
+                    {p.liveUrl && (
                       <a
                         href={p.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300 uppercase tracking-wider transition-all"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 uppercase tracking-wider transition-all"
                       >
                         VISITAR SITIO WEB <ExternalLink className="w-3.5 h-3.5" />
                       </a>
-                    </div>
-                  )}
+                    )}
+
+                    {/* Enlace al Repositorio de GitHub */}
+                    {p.githubUrl && (
+                      <a
+                        href={p.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-400 hover:text-white uppercase tracking-wider transition-all"
+                      >
+                        REPOSITORIO GITHUB <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
 

@@ -87,9 +87,9 @@ export default function Hero() {
 
             {/* Badge Rol Junior */}
             <div className="absolute -bottom-6 right-0 bg-[#e5382b] text-white p-4 rounded-xl shadow-2xl">
-              <p className="text-2xl font-mono font-bold">01</p>
+              <p className="text-2xl font-mono font-bold"></p>
               <p className="text-xs font-semibold uppercase">Full Stack Developer</p>
-              <p className="text-[10px] opacity-80">Balancán, Tabasco, MX</p>
+              <p className="text-[15px] opacity-80">MX</p>
             </div>
           </div>
         </div>
